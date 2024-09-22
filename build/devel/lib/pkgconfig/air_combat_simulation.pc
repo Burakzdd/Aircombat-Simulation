@@ -1,0 +1,8 @@
+prefix=/home/burakzdd/catkin_ws/src/air_combat_simulation/build/devel
+
+Name: air_combat_simulation
+Description: Description of air_combat_simulation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

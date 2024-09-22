@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="empty">
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+    </scene>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://asphalt_plane</uri>
+      <pose>0 0 0 0 0 0</pose>
+      <scale>10 10 1</scale> <!-- Adjust the scale as needed -->
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+
+  </world>
+</sdf>

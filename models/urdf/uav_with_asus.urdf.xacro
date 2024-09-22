@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<robot name="quadrotor" xmlns:xacro="http://www.ros.org/wiki/xacro">
+   
+    <xacro:property name="M_PI" value="3.1415926535897931" />
+    
+    <!-- Included URDF Files -->
+    <xacro:include filename="$(find air_combat_simulation)/models/urdf/uav_base_dorlion.urdf.xacro"/>
+    
+    <!-- Instantiate quadrotor_base_macro once (has no parameters atm) -->
+    <xacro:quadrotor_base_macro />
+    
+    <!-- Asus Xiton Live Pro -->
+    <xacro:include filename="$(find air_combat_simulation)/models/camera/asus_camera.urdf.xacro" />
+    <xacro:asus_camera name="camera" parent="base_link">
+      <origin xyz="0.5 0.0 -0.06" rpy="0 0 0"/>
+      <!-- <origin xyz="0.143 0.0 -0.032" rpy="0 ${M_PI/9} 0"/> -->
+
+    </xacro:asus_camera>
+    
+</robot>
+  

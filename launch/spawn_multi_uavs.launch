@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<launch>
+   <arg name="model" default="$(find air_combat_simulation)/models/urdf/uav.gazebo.xacro" />
+
+   <group ns="dorlion">
+     <include file="$(find air_combat_simulation)/launch/spawn_uav_with_asus.launch">
+       <arg name="name" value="dorlion" />
+       <arg name="tf_prefix" value="dorlion" />
+       <arg name="x" value="0.0" />
+       <arg name="y" value="0.0" />
+     </include>
+   </group>
+
+   <group ns="uav1">
+     <include file="$(find air_combat_simulation)/launch/spawn_uav.launch">
+       <arg name="name" value="uav1" />
+       <arg name="tf_prefix" value="uav1" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="x" value="3.0" />
+       <arg name="y" value="-7.0" />
+     </include>
+   </group>
+
+    <group ns="uav2">
+     <include file="$(find air_combat_simulation)/launch/spawn_uav.launch">
+       <arg name="name" value="uav2" />
+       <arg name="tf_prefix" value="uav2" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="x" value="-4.0" />
+      <arg name="y" value="5.0" />
+
+     </include>
+   </group>
+
+   <group ns="uav3">
+     <include file="$(find air_combat_simulation)/launch/spawn_uav.launch">
+       <arg name="name" value="uav3" />
+       <arg name="tf_prefix" value="uav3" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="x" value="6.0" />
+       <arg name="y" value="8.0" />
+
+     </include>
+   </group>
+
+  <group ns="uav4">
+     <include file="$(find air_combat_simulation)/launch/spawn_uav.launch">
+       <arg name="name" value="uav4" />
+       <arg name="tf_prefix" value="uav4" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="x" value="-6.0" />
+       <arg name="y" value="-5.0" />
+       
+     </include>
+   </group>
+
+</launch>
+
