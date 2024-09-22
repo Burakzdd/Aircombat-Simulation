@@ -44,11 +44,11 @@ Bu yazılımı çalıştırmak için aşağıdaki yazılımların kurulu olduğu
 
 1. Simülasyon ortamını başlatın:
    ```bash
-   roslaunch aircombat_simulation aircombat.launch
+   roslaunch aircombat_simulation multi_uav_empty_world.launch
    ```
 2. Kontrol algoritmasını çalıştırın:
    ```bash
-   rosrun aircombat_simulation control.py
+   rosrun aircombat_simulation main.py
    ```
 
 ## Gereksinimler
